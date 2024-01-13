@@ -1,0 +1,13 @@
+1. Crea uno script js da utilizzare con Node.js che effettua una chiamata ad https://api.themoviedb.org/3/movie/popular (TMDB), che ritorna una lista di film popolari. Stampa il titolo del primo film in console. 
+Attenzione: avrai bisogno di installare il pacchetto 'dotenv', come visto a lezione, e configurare la tua API Key in un file .env.
+
+2. Salva la lista di film in un file movies.json, usando il modulo 'fs' di Node.js. Mi raccomando, ricordati di usare correttamente il modulo 'path' per gestire i percorsi ed evitare problema di compatibilità tra sistemi operativi diversi.
+
+3. Aggiungi una logica per cui, se il file è già presente nel server, non viene effettuata la chiamata a TMDB. In alternativa, viene letto il file usando il modulo 'fs'.
+
+BONUS 1: Aggiungi la possibilità di passare un argomento quando viene eseguito lo script. Controlla se l'argomento inserito è tra i seguenti: now_playing, popular, top_rated, upcoming. Se non lo è, ignoralo. Altrimenti, utilizza l'argomento per modificare la chiamata API da
+https://api.themoviedb.org/3/movie/popular
+a
+https://api.themoviedb.org/3/movie/{argomento}  
+
+BONUS 2: Usando il metodo .statSync del modulo 'fs', controlla ad ogni esecuzione se il file salvato è più vecchio di 10 secondi. In quel caso, rieffettua la chiamata, come visto a lezione.
